@@ -1,40 +1,36 @@
 .profile{
     border: 2px solid #212121;
     border-radius: 9px;
-    margin: 20px auto;
+    margin: 10px auto;
     overflow: hidden;
-    max-width: 1060px;
 }
-
 .user{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    align-items: center;
+    padding: 20px;
 }
-
 .avatar{
-    max-width: 400px;
+    max-width: 200px;
     margin: 0 auto;
-    margin-bottom: 68px;
+    margin-bottom: 48px;
     object-fit: contain;
     border-radius: 100%;
     background-color: #212121;
 }
-
 .username{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
 }
 .usertag{
     color:#808080;
-    font-size: 32px;
+    font-size: 22px;
 }
 .userlocation{
     color:#808080;
-    font-size: 32px;
+    font-size: 22px;
 }
-
 .stats{
     list-style: none;
     display: flex;
@@ -43,23 +39,52 @@
     background-color: #d3d3d3;
     border-top: 2px solid #808080;
 }
-
 .statsitem{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: calc(100% / 3);
-    padding: 65px 40px;
+    padding: 15px 10px;
 }
 .statsitem:not(:last-child){
     border-right: 2px solid #808080;
 }
-
 .statsname{
-    font-size: 30px;
+    font-size: 18px;
 }
 .statsvalue{
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    .profile{
+        margin: 20px auto;
+        max-width: 1060px;
+    }
+    .user{
+        padding: 40px;
+    }
+    .avatar{
+        max-width: 400px;
+    }
+    .username{
+        font-size: 40px;
+    }
+    .usertag{
+        font-size: 32px;
+    }
+    .userlocation{
+        font-size: 32px;
+    }
+    .statsitem{
+        padding: 65px 40px;
+    }
+    .statsname{
+        font-size: 30px;
+    }
+    .statsvalue{
+        font-size: 30px;
+    }    
 }
