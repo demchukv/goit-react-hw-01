@@ -29,7 +29,7 @@ const FriendList = ({friends}) => {
 }
 
 FriendList.propTypes = {
-    friends: PropTypes.object,
+    friends: PropTypes.array,
 };
 FriendListItem.propTypes = {
     name: PropTypes.string.isRequired,
