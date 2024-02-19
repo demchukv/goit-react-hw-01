@@ -5,7 +5,7 @@ const TransactionHistoryItem = ({type, amount, currency}) => {
     return (
         <>
         <td className={css.transtype}>{type}</td>
-        <td className={css.transamount}>{amount}</td>
+        <td className={css.transamount}>{amount.toFixed(2)}</td>
         <td className={css.transcurrency}>{currency}</td>
       </>
     );
@@ -25,7 +25,7 @@ const TransactionHistory = ({items}) => {
             {items.map(({ id, type, amount, currency }) => {
                 return (
                 <tr key={id}>
-                    <TransactionHistoryItem type={type} amount={amount} currency={currency} />
+                    <TransactionHistoryItem type={type} amount={Number(amount)} currency={currency} />
                 </tr>
                 );
             })}
