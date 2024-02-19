@@ -1,5 +1,4 @@
-/*import PropTypes from 'prop-types';
-import clsx from "clsx";*/
+import PropTypes from 'prop-types';
 import css from './TransactionHistory.module.css';
 
 const TransactionHistoryItem = ({type, amount, currency}) => {
@@ -34,5 +33,14 @@ const TransactionHistory = ({items}) => {
         </table>
     );
 }
+
+TransactionHistory.propTypes = {
+    items: PropTypes.array,
+};
+TransactionHistoryItem.propTypes = {
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
+};
 
 export default TransactionHistory;
