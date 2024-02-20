@@ -1,7 +1,14 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
-const Profile = ({ name, tag, location = '', image = '', stats: { followers = 0, views = 0, likes = 0 } }) => {
+const Profile = ({ 
+  name, 
+  tag, 
+  location = "unknow", 
+  image = "https://cdn-icons-png.flaticon.com/512/149/149071.png", 
+  stats: { followers = 0, views = 0, likes = 0 } 
+}) => {
+  console.log(image);
     return (
         <div className={css.profile}>
           <div className={css.user}>
