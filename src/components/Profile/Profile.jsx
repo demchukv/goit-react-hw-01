@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 
-const Profile = ({ name, tag, location, image, stats: { followers = 0, views = 0, likes = 0 } }) => {
+const Profile = ({ name, tag, location = '', image = '', stats: { followers = 0, views = 0, likes = 0 } }) => {
     return (
         <div className={css.profile}>
           <div className={css.user}>
@@ -36,8 +36,8 @@ const Profile = ({ name, tag, location, image, stats: { followers = 0, views = 0
 Profile.propTypes = {
     name: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    location: PropTypes.string,
+    image: PropTypes.string,
     stats: PropTypes.object,
     followers: PropTypes.number,
     views: PropTypes.number,
